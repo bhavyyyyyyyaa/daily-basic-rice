@@ -1,0 +1,17 @@
+# 1. Ignore EVERYTHING in ~/.config by default
+/*
+
+# 2. Re-include the specific config folders/files you actually want to track
+!/hypr/
+!/kitty/
+!/btop/
+!/starship.toml
+!/install.sh
+!/.gitignore
+!/fish/
+!/wallpapers/
+
+# 3. Ignore unwanted cache, logs, or temporary state inside your tracked folders
+*.log
+*.tmp
+cache/
