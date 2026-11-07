@@ -5,7 +5,7 @@ if status is-login
         set -gx XDG_CURRENT_DESKTOP Hyprland
 
         # start-hyprland directly
-        exec start-hyprland
+        exec uwsm start hyprland.desktop
     end
 end
 
@@ -15,3 +15,5 @@ if status is-interactive
 end
 
 starship init fish | source
+
+fish_add_path /home/bhavya/.spicetify
