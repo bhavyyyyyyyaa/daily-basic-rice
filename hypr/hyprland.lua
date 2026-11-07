@@ -77,5 +77,3 @@ hl.bind("SUPER + K", hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /
 hl.bind("SUPER + F", hl.dsp.exec_cmd("/usr/bin/quickshell ipc --any-display -p /usr/share/tide-island call island toggle"))
 -- Tide Island shortcuts: end.
 
--- HyprMod managed settings
-require("hyprland-gui")

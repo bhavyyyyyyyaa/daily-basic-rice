@@ -5,6 +5,7 @@ set -e
 
 echo "=== Starting Arch Hyprland Dotfiles Installation ==="
 
+
 # 1. Update system and install base development tools & git
 echo "[-] Installing base-devel and git..."
 sudo pacman -Syu --needed --noconfirm base-devel git
@@ -12,6 +13,12 @@ sudo pacman -Syu --needed --noconfirm base-devel git
 # 2. Install video drivers (Mesa, Vulkan, and Intel graphics support)
 echo "[-] Installing video drivers (Mesa, Vulkan, Intel)..."
 sudo pacman -S --needed --noconfirm mesa vulkan-intel intel-media-driver
+
+# Install yay
+echo "[-] Installing yay..."
+git clone --depth=1 https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
 
 # 3. Install Hyprland window manager and Kitty terminal emulator
 echo "[-] Installing Hyprland and Kitty..."
@@ -38,7 +45,15 @@ fi
 echo "[-] Installing Btop..."
 sudo pacman -S --needed --noconfirm btop
 
-# 6. Pull or clone the GitHub configuration into ~/.config
+# 6. Install macOS cursor
+echo "[-] Installing macOS cursor..."
+yay -S macos-tahoe-cursor
+
+# install tide-island
+echo "[-] installing tide-island"
+yay -S tide-island
+
+# 7. Pull or clone the GitHub configuration into ~/.config
 REPO_URL="https://github.com/bhavyyyyyyyaa/daily-basic-rice.git"
 CONFIG_DIR="$HOME/.config"
 
